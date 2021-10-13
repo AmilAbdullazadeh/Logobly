@@ -1,0 +1,174 @@
+// custom styles for shortcuts
+@import "variables";
+@import "mixin";
+
+//? @include mobile
+//? $color-1
+// $btn-text-color
+// $title-text-color
+// $paragraph-text-color
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#page {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 10%;
+}
+
+.head {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      display: flex;
+      column-gap: 20px;
+      .menu-item {
+        color: $paragraph-text-color;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .card-img {
+      width: 500px;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .card {
+      width: 600px;
+      padding: 0 50px;
+
+      @include mobile {
+        padding: 0;
+      }
+      .card-title {
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+        color: $title-text-color;
+
+        @include mobile {
+          font-size: 17px;
+        }
+      }
+
+      .card-body {
+        color: $paragraph-text-color;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+
+      .card-contacts {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .email {
+          width: 225px;
+          border: 1px solid transparent;
+          border-radius: 6px;
+          color: $paragraph-text-color;
+          padding: 10px 5px;
+          background-color: rgba(179, 179, 179, 0.322);
+
+          @include mobile {
+            width: 175px;
+          }
+
+          &:focus {
+            border-color: transparent;
+            outline: none;
+          }
+        }
+
+        .btn-submit {
+          width: 150px;
+          border: 1px solid transparent;
+          border-radius: 6px;
+          color: $btn-text-color;
+          padding: 10px 5px;
+          background-color: #2991e5;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: all 0.35s ease-out;
+
+          margin-right: 25px;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          @include mobile {
+            margin-right: 0;
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 80px;
+    .feature {
+      text-align: center;
+      max-width: 350px;
+      .feature-img {
+        width: 120px;
+      }
+
+      .feature-title {
+          color: $title-text-color;
+          margin-top: 0 !important;
+          margin-bottom: 5px !important;
+
+          @include mobile {
+          font-size: 17px;
+        }
+      }
+
+      .feature-info {
+          color: $paragraph-text-color;
+          margin: 0 !important;
+
+          @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 576px) {
+//     .card-img {
+//         width: 250px !important;
+//     }
+// }

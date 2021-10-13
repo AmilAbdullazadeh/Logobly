@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#page {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 10%;
+}
+
+.head nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head nav h3 {
+  letter-spacing: 2px;
+}
+
+.head nav .menu {
+  display: flex;
+  column-gap: 20px;
+}
+
+.head nav .menu .menu-item {
+  color: #626262;
+}
+
+@media (max-width: 767px) {
+  .head nav .menu .menu-item {
+    font-size: 15px;
+  }
+}
+
+.main .top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main .top .card-img {
+  width: 500px;
+}
+
+@media (max-width: 767px) {
+  .main .top .card-img {
+    width: 100%;
+  }
+}
+
+.main .top .card {
+  width: 600px;
+  padding: 0 50px;
+}
+
+@media (max-width: 767px) {
+  .main .top .card {
+    padding: 0;
+  }
+}
+
+.main .top .card .card-title {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  color: #0e0d0d;
+}
+
+@media (max-width: 767px) {
+  .main .top .card .card-title {
+    font-size: 17px;
+  }
+}
+
+.main .top .card .card-body {
+  color: #626262;
+}
+
+@media (max-width: 767px) {
+  .main .top .card .card-body {
+    font-size: 14px;
+  }
+}
+
+.main .top .card .card-contacts {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.main .top .card .card-contacts .email {
+  width: 225px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #626262;
+  padding: 10px 5px;
+  background-color: rgba(179, 179, 179, 0.322);
+}
+
+@media (max-width: 767px) {
+  .main .top .card .card-contacts .email {
+    width: 175px;
+  }
+}
+
+.main .top .card .card-contacts .email:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+.main .top .card .card-contacts .btn-submit {
+  width: 150px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 5px;
+  background-color: #2991e5;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.35s ease-out;
+  margin-right: 25px;
+}
+
+.main .top .card .card-contacts .btn-submit:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .main .top .card .card-contacts .btn-submit {
+    margin-right: 0;
+    width: 90px;
+  }
+}
+
+.main .features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.main .features .feature {
+  text-align: center;
+  max-width: 350px;
+}
+
+.main .features .feature .feature-img {
+  width: 120px;
+}
+
+.main .features .feature .feature-title {
+  color: #0e0d0d;
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+@media (max-width: 767px) {
+  .main .features .feature .feature-title {
+    font-size: 17px;
+  }
+}
+
+.main .features .feature .feature-info {
+  color: #626262;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .main .features .feature .feature-info {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
