@@ -146,20 +146,20 @@
       }
 
       .feature-title {
-          color: $title-text-color;
-          margin-top: 0 !important;
-          margin-bottom: 5px !important;
+        color: $title-text-color;
+        margin-top: 0 !important;
+        margin-bottom: 5px !important;
 
-          @include mobile {
+        @include mobile {
           font-size: 17px;
         }
       }
 
       .feature-info {
-          color: $paragraph-text-color;
-          margin: 0 !important;
+        color: $paragraph-text-color;
+        margin: 0 !important;
 
-          @include mobile {
+        @include mobile {
           font-size: 14px;
         }
       }
@@ -167,8 +167,80 @@
   }
 }
 
-// @media screen and (max-width: 576px) {
-//     .card-img {
-//         width: 250px !important;
-//     }
-// }
+.section {
+  position: relative;
+}
+
+#menu {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 40px;
+  height: 40px;
+  z-index: 2000;
+  // visibility: hidden;
+  // display: none;
+}
+
+input[type="checkbox"]:checked ~ #nav {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.menu {
+  position: relative;
+  .menu-icon {
+    width: 40px;
+    cursor: pointer;
+  }
+}
+
+#nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  transition: all 0.5s ease-in-out;
+
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+.nav__list {
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 100%;
+}
+
+.nav__item {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: all 0.35s ease-in-out;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 5px;
+
+  &:hover {
+    transform: scale(1.6);
+    transform: translateX(15px);
+  }
+}
