@@ -5,6 +5,16 @@
   list-style: none;
 }
 
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
 #page {
   width: 100%;
   height: 100vh;
